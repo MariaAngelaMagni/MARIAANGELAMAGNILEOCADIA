@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ondas Eletromagnéticas</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para ajuste proporcional da imagem no texto */
+        .figura-onda {
+            float: left;
+            width: 40%; /* Largura proporcional ao bloco de texto */
+            max-width: 400px;
+            min-width: 250px;
+            margin: 0 20px 15px 0; /* Espaçamento entre a imagem e o texto ao redor */
+        }
+
+        .figura-onda img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .figura-onda figcaption {
+            font-size: 0.85em;
+            color: #555;
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        /* Limpa o float após o artigo para evitar quebras de layout */
+        article::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 600px) {
+            .figura-onda {
+                float: none;
+                width: 100%;
+                max-width: 100%;
+                margin: 20px 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -36,14 +78,10 @@
                 Graças a elas, é possível utilizar tecnologias que facilitam a comunicação, o aprendizado, o lazer e a segurança.
             </p>
 
-            <!-- Imagem inserida com o arquivo salvo localmente e fallback configurado -->
-            <figure style="text-align: center; margin: 20px 0;">
-                <img src="ondas.png" 
-                     alt="Representação tridimensional de uma onda eletromagnética mostrando o campo elétrico em vermelho, o campo magnético em azul, comprimento de onda, amplitude e direção de propagação." 
-                     style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
-                    Representação gráfica da oscilação dos campos elétrico e magnético em uma onda eletromagnética.
-                </figcaption>
+            <!-- Figura proporcional integrada ao fluxo do texto -->
+            <figure class="figura-onda">
+                <img src="ondas.png" alt="Representação tridimensional de uma onda eletromagnética mostrando os campos elétrico e magnético oscilando em eixos perpendiculares.">
+                <figcaption>Representação gráfica das oscilações dos campos elétrico e magnético em uma onda eletromagnética.</figcaption>
             </figure>
 
             <p>
